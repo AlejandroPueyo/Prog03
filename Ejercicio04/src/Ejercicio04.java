@@ -11,35 +11,31 @@ public class Ejercicio04 {
 		int numero;
 		int divi=2;
 		int resto;
-		boolean resultado=true;
+		
 		
 		System.out.print("Ingrese un numero: ");
 		numero=teclado.nextInt();
 		
 			while (divi<numero){
-				resto=numero % multi;
+				resto=numero % divi;
 			
-					if (resto!=0){
-						resultado=true;
+					if (resto==0){
 						
-						
+						System.out.println("No es primo");
+						divi=numero;
 					}
-					else {
-						resultado=false;
-						multi++;
-					}
+					else 
+						System.out.println("Es primo");
+						divi=numero;
+						}
 					
+					divi++;
 			}
-			if (resultado=true){
-				System.out.println("Es primo");
-			}
-				else {
-					System.out.println("No es primo");
-				}
+		
 			
 	}
 	
-}
+
 
 
 					
