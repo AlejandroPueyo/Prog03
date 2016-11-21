@@ -10,24 +10,43 @@ public class Ejercicio11 {
 		Scanner teclado=new Scanner(System.in);
 		int numero;
 		int resto;
-		int contador;
-		int contadorN;
-		
-		while (divi<numero){
-			resto=numero % divi;
-		
+		int contador=2;
+		int contadorN=3;
+		boolean primo=false;
+
+		System.out.print("Ingrese un numero: ");
+		numero=teclado.nextInt();
+
+
+		System.out.println("1 Es primo");
+		System.out.println("2 Es primo");
+		while (contadorN<numero ){
+
+			while (contador<contadorN){
+				resto=contadorN % contador;
+
 				if (resto==0){
-					
-					System.out.println("No es primo");
-					divi=numero;
+					primo=false;
+					contador=contadorN;
 				}
-				else 
-					System.out.println("Es primo");
-					divi=numero;
-					}
-				
-				divi++;
+				else{
+					primo=true;
+				}
 
+				contador++;
+			}
+
+
+			if (primo==true){
+
+				System.out.println(contadorN + " Es primo");
+			}
+
+
+			contadorN++;
+			contador=2;
+
+		}
 	}
-
 }
+
